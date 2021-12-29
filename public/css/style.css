@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #192a56;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #27ae60;
+}
+
+.fa-times {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.heading span {
+  font-size: 2rem;
+  color: #27ae60;
+  margin: 0.3rem 0;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.heading h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #192a56;
+  text-align: center;
+}
+
+h1{
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header.head {
+  position: fixed;
+  padding: 2rem 7%;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  z-index: 10000;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header.head a.logo {
+  font-size: 2.4rem;
+  color: #192a56;
+  font-weight: 600;
+}
+
+header.head a.logo i {
+  color: #27ae60;
+}
+section{
+    padding: 10rem 9%;
+}
+header.head .navbar a {
+  padding: .5rem 1.5rem;
+  font-size: 1.6rem;
+  color: #666;
+  border-radius: .3rem;
+}
+
+header.head .navbar a:hover {
+  background: #27ae60;
+  color: #fff;
+}
+
+header.head .navbar a.active {
+  background: #27ae60;
+  color: #fff;
+}
+
+header.head .nav-items {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: .5rem;
+}
+
+header.head .nav-items .menu-bar {
+  display: none;
+}
+
+header.head .nav-items .items {
+  padding: 1.2rem 1.3rem;
+  background: #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header.head .nav-items .items:hover {
+  background: #27ae60;
+}
+
+header.head .nav-items .items:hover i {
+  color: #fff;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+header.head .nav-items .items i {
+  color: #192a56;
+  font-size: 1.3rem;
+}
+
+header.head.box-shadow {
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+h2{
+    font-size: 6rem;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: .05rem #000;
+}
+input{
+    border: .2rem solid #000;
+    display: block;
+    margin: 1.5rem auto;
+    width: 100%;
+    padding: .9rem;
+    border-radius: .5rem;
+    text-transform: lowercase;
+}
+input[type="submit"]{
+    width: 10%;
+    background: transparent;
+    border: .2rem solid #27ae60;
+    color: #27ae60;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background: #27ae60;
+    color: #fff;
+}
