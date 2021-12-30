@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs')
 const express = require('express')
 const mongoose = require('mongoose')
 const validator = require('validator')
@@ -43,6 +44,16 @@ const schema = new mongoose.Schema({
         trim: true,
         required: true,
     }
+})
+
+
+schema.pre('save', async function(next){
+    if(this.isModified('password')){
+        this.password = await bcrypt.hash(this.password, 10)
+        next()
+    }
+
+    this.cpassword = undefined;
 })
 
 const Collection = new mongoose.model('collector', schema)

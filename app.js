@@ -3,7 +3,8 @@ const path = require('path')
 const hbs = require('hbs')
 require('./db/connect')
 const Collection = require('./models/schema');
-const async = require('hbs/lib/async');
+const bcrypt = require('bcryptjs')
+// const async = require('hbs/lib/async');
 
 
 const app = express()
@@ -63,7 +64,9 @@ app.post('/login', async (req, res)=>{
         let password = req.body.pass
         const datas = await Collection.findOne({email: email})
         
-        if(datas.password === password){
+        const isMatch = await bcrypt.compare(password, datas.password)
+
+        if(isMatch){
             res.status(201).render('index')
         }else{
             res.status(400).send('password are not matching')
